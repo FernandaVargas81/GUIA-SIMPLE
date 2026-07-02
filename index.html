@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Guía Simple - Tu compañero en trámites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script id="tailwind-config">
+      tailwind.config = { theme: { extend: { colors: { "primary": "#9b4500", "primary-container": "#ff8c42", "secondary": "#b52330", "tertiary": "#a43c12", "tertiary-container": "#ff8a60", "background": "#fbf9f4", "surface-container": "#f0eee9", "on-surface": "#1b1c19", "on-surface-variant": "#564338" } } } }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col text-on-surface">
+
+    <header class="bg-white shadow-[0_4px_20px_-4px_rgba(155,69,0,0.15)] sticky top-0 z-50">
+        <div class="flex justify-between items-center px-6 md:px-10 py-4 max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white"><span class="material-symbols-outlined font-bold">assignment</span></div>
+                <span class="text-xl font-extrabold text-primary">Guía Simple</span>
+            </div>
+            <nav class="hidden lg:flex items-center gap-6">
+                <a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="index.html">Explorar</a>
+                <a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="dashboard.html">Mis Trámites</a>
+                <a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="mapa.html">Centros Cercanos</a>
+                <a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="comentarios.html">Comunidad</a>
+                <a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="ayuda.html">Ayuda</a>
+            </nav>
+            <a href="dashboard.html" class="bg-primary text-white px-5 py-2 rounded-2xl text-sm font-bold hover-lift">Mi Panel</a>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 md:px-10 w-full py-12">
+        <section class="text-center max-w-2xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">Tu compañero en <span class="text-primary">trámites</span></h1>
+            <p class="text-lg text-on-surface-variant mb-8">Transformamos la burocracia en compañía. Encuentra guías claras, paso a paso y sin palabras confusas.</p>
+            <div class="relative bg-white p-2 rounded-2xl shadow-md border flex items-center gap-2">
+                <span class="material-symbols-outlined text-on-surface-variant ml-3">search</span>
+                <input class="w-full bg-transparent border-none text-on-surface placeholder-on-surface-variant/60 focus:ring-0 text-base py-2" placeholder="¿Qué trámite necesitas hoy? Ej. Licencia o Pasaporte" type="text" id="search-input"/>
+                <button class="bg-primary text-white px-6 py-2 rounded-xl font-bold">Buscar</button>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold mb-8 text-on-surface">Explora por categorías de trámites</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="tramite.html" class="bg-white p-6 rounded-[32px] shadow-sm hover-lift border-b-4 border-primary flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-2xl">badge</span></div>
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-primary">Identidad y Pasaportes</h3>
+                        <p class="text-sm text-on-surface-variant mb-4">Expedición de pasaporte ordinario, renovación de cédula digital y registros de ciudadanía.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="px-3 py-1 bg-primary-container/20 rounded-full text-xs font-bold text-primary">Disponible paso a paso</span>
+                        <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </a>
+
+                <a href="tramite.html" class="bg-white p-6 rounded-[32px] shadow-sm hover-lift border-b-4 border-tertiary flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-tertiary/10 rounded-2xl flex items-center justify-center text-tertiary mb-4 group-hover:bg-tertiary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-2xl">directions_car</span></div>
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-primary">Transporte y Movilidad</h3>
+                        <p class="text-sm text-on-surface-variant mb-4">Licencias de conducción, pases de motocicleta, traspasos e historial de multas de tránsito.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="px-3 py-1 bg-tertiary-container/20 rounded-full text-xs font-bold text-tertiary">Disponible paso a paso</span>
+                        <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </a>
+
+                <div class="bg-white p-6 rounded-[32px] shadow-sm hover-lift border-b-4 border-secondary flex flex-col justify-between opacity-80">
+                    <div>
+                        <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-4"><span class="material-symbols-outlined text-2xl">work</span></div>
+                        <h3 class="text-lg font-bold mb-2">Trabajo y Jubilación</h3>
+                        <p class="text-sm text-on-surface-variant mb-4">Cálculo de semanas cotizadas, historia laboral y radicación de cesantías.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-[11px] font-bold text-secondary bg-red-50 px-2 py-1 rounded-xl">Próximamente</span>
+                        <span class="material-symbols-outlined text-gray-300">lock</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="inicio.js"></script>
+</body>
+</html>
